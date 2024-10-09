@@ -2,7 +2,9 @@ const header = document.querySelector("header"); //Seleccionamos el header
 
 header.innerHTML = `
 
+
 <img src="../img/Logo.png" class="logo" alt="">
+
 
 <nav>
 
