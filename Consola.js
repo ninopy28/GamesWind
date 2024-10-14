@@ -12,7 +12,7 @@ const camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.inner
 
 // Crear un renderizador
 const renderer = new THREE.WebGLRenderer({ alpha: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(800, 600);
 document.getElementById('threejs-container').appendChild(renderer.domElement); // Agregar al contenedor
 
 // Creación control del objeto 
@@ -34,15 +34,15 @@ loader.load('../renders/Xbox.glb', function (gltf) {
     model = gltf.scene;
 
     // Ajustar la escala
-    model.scale.set(0.5, 0.5, 0.5); // Escala a la mitad
+    model.scale.set(18, 18, 18); // Escala a la mitad
 
     // Ajustar rotación
-    model.rotation.x = 1.5;
+    model.rotation.x = Math.PI;
     model.rotation.y = Math.PI; // 180 grados para que esté mirando hacia la cámara
-    model.rotation.z = 0;
+    model.rotation.z = Math.PI;
 
     // Ajustar la posición
-    model.position.set(0, 0, 0); // Centrado en la escena
+    model.position.set(0, -3, 0); // Centrado en la escena
 
     scene.add(model);
 }, undefined, function (error) {
@@ -55,7 +55,7 @@ camera.position.z = 7; // Ajustar según sea necesario
 // Animación del modelo 
 function animate() {
     if (model) {
-        model.rotation.z += 0.01; // Rotación automática
+        model.rotation.y += -0.01; // Rotación automática 
     }
 
     renderer.render(scene, camera);

@@ -1,0 +1,85 @@
+.container{
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+background-color: black;
+color: white;
+margin-top: 50px;
+margin-bottom: 50px;
+gap: 500px;
+
+}
+
+
+.img-video{
+
+    width: 700px;
+
+}
+
+.titulo-video{
+
+font-size: 40px;
+
+}
+
+.games{
+
+width: 250px;
+
+
+}
+
+.games-dates{
+display: flex;
+flex-direction: column;
+background-color: black;
+color: white;
+border: 1px solid;
+padding: 20px;
+gap: 20px;
+
+}
+
+
+.button-carrito{
+
+    font-size: 15px;
+    font-weight: bold;
+    width: 250px;
+    padding: 5px;
+    color: white;
+    background-color: #494949;
+    cursor: pointer;
+
+}
+
+.grid-container{
+
+display: grid;
+grid-template-columns: repeat(3,1fr);
+margin-left: 50px;
+margin-right: 50px;
+margin-bottom: 50px;
+gap: 70px;
+
+
+}
+
+.grid-space{
+
+display: flex;
+flex-direction: column;
+}
+
+.grid-item{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+
+}

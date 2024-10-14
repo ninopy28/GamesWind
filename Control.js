@@ -9,7 +9,7 @@ const camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.inner
 
 // Crear un renderizador
 const renderer = new THREE.WebGLRenderer({ alpha: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(800, 600);
 document.getElementById('threejs-container').appendChild(renderer.domElement); // Agregar al contenedor
 
 // Creación control del objeto 
@@ -32,6 +32,7 @@ loader.load('../renders/Control.glb', function (gltf) {
 
     // Ajustar la escala
     model.scale.set(0.5, 0.5, 0.5); // Escala a la mitad
+
 
     // Ajustar rotación
     model.rotation.x = 1.5;
