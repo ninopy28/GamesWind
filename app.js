@@ -12,11 +12,10 @@ header.innerHTML = `
 <a href="../pages/videoJuegos.html">VIDEOJUEGOS</a>
 <a href="../pages/consolas.html">CONSOLAS</a>
 <a href="../pages/accesorios.html">ACCESORIOS</a>
-<a href="../pages/imagenes.html">IMAGENES</a>
 
 </nav>
 
-<button class="button-login">Login</button>
+<button id="miBoton" class="button-login">Login</button>
 
 `   //Reemplazamos el valor del header
 
@@ -51,3 +50,9 @@ footer.innerHTML = `
 </div>
 
 `
+
+
+
+document.getElementById('miBoton').addEventListener('click', function() {
+    window.location.href = 'login.html'; // Cambia a la URL deseada
+});
