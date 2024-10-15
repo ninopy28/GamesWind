@@ -49,10 +49,11 @@ footer.innerHTML = `
 
 </div>
 
+
+
 `
 
 
-
 document.getElementById('miBoton').addEventListener('click', function() {
-    window.location.href = 'login.html'; // Cambia a la URL deseada
+    window.location.href = '/pages/login.html'; // Cambia a la URL deseada
 });
