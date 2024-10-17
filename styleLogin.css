@@ -3,11 +3,32 @@
 
 display: flex;
 flex-direction: row;
-border: 1px solid;
-margin-top: 500px;
+justify-content: center;
+border: 5px solid #EDEDED;
+border-radius: 15px;
+margin-top: 200px;
 margin-bottom: 500px;
-margin-left: 300px;
-margin-right: 300px;
+margin-left: 450px;
+margin-right: 450px;
+padding: 1px;
+
+}
+
+.Login-Centrado{
+
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
+}
+
+
+.titulo{
+
+
+text-align: center;
 }
 
 
@@ -15,6 +36,45 @@ margin-right: 300px;
 
 display: flex;
 flex-direction: column;
+justify-content: center;
 gap: 20px;
 
+
 }
+
+.Login-text{
+
+width: 300px;
+height: 50px;
+border-radius: 10px;
+
+}
+
+.Container-img{
+
+display: flex;
+flex-direction: row;
+margin-left: auto;
+
+
+}
+
+.img-spider{
+
+border-radius: 15px;
+
+}
+
+.button-log{
+
+    background-color: black;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 30px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
