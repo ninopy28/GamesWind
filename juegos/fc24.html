@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EA SPORT FC 24</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../videojuegos.html">Videojuegos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/Fc24.PNG" class="game-img" alt="EA SPORT FC 24">
+            <h1>EA SPORT FC 24</h1>
+            <p><b>Precio: $250.000</b></p>
+            <p><b>Plataforma: Xbox Series X</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción del Juego</h2>
+            <p>EA SPORT FC 24 es el último título en la serie de simuladores de fútbol de EA Sports. Ofrece una experiencia realista y dinámica con mejoras en la jugabilidad, gráficos y modos de juego.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Modos de juego variados: carrera, Ultimate Team, modo historia.</li>
+                <li>Gráficos mejorados con tecnología de última generación.</li>
+                <li>Jugabilidad realista con IA avanzada.</li>
+            </ul>
+
+            <h2>Imágenes del Juego</h2>
+            <div class="game-gallery">
+                <img src="../img/games/FC1.PNG" alt="Imagen 1 del juego">
+                <img src="../img/games/FC2.PNG" alt="Imagen 2 del juego">
+                <img src="../img/games/Fc3.PNG" alt="Imagen 3 del juego">
+            </div>
+
+            <h2>Requisitos del Sistema (Xbox Series X)</h2>
+            <ul>
+                <li>Almacenamiento requerido: 50 GB</li>
+                <li>Conexión a Internet: Obligatoria para multijugador y actualizaciones</li>
+                <li>Resolución: Compatible con 4K Ultra HD y HDR</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+            <a href="../pages/videoJuegos.html"><button class="button-back">Volver</button></a>
+            <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+
+    <script>
+        function addToCart() {
+    // Simulación de añadir al carro
+    const product = {
+        name: "EA SPORT FC 24",
+        price: 250000,
+        platform: "Xbox Series X"
+    };
+
+    // Recuperar el carrito del almacenamiento local
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Agregar el producto al carrito
+    cart.push(product);
+
+    // Guardar el carrito actualizado en el almacenamiento local
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Actualizar la vista del carrito
+    updateCart();
+
+    // Confirmación
+    alert(`${product.name} ha sido añadido al carro.`);
+}
+
+    </script>
+
+<footer></footer>
+
+<script src="../app.js"></script>
+
+</body>
+</html>

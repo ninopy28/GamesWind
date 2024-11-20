@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forza Horizon 5</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../videojuegos.html">Videojuegos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/Forza.PNG" class="game-img" alt="Forza Horizon 5">
+            <h1>Forza Horizon 5</h1>
+            <p><b>Precio: $149.900</b></p>
+            <p><b>Plataforma: Xbox Series X</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción del Juego</h2>
+            <p>Forza Horizon 5 es un videojuego de carreras de mundo abierto desarrollado por Playground Games. En esta entrega, los jugadores podrán explorar un vasto y hermoso mapa inspirado en México, con un sinfín de vehículos y actividades.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Explora un mundo abierto basado en México con diversas regiones y paisajes.</li>
+                <li>Modo multijugador en línea con eventos y carreras en grupo.</li>
+                <li>Más de 500 vehículos para coleccionar y personalizar.</li>
+                <li>Gráficos impresionantes con soporte para 4K y HDR.</li>
+            </ul>
+
+            <h2>Imágenes del Juego</h2>
+            <div class="game-gallery">
+                <img src="../img/games/Forza1.PNG" alt="Imagen 1 de Forza Horizon 5">
+                <img src="../img/games/Forza2.PNG" alt="Imagen 2 de Forza Horizon 5">
+                <img src="../img/games/Forza3.PNG" alt="Imagen 3 de Forza Horizon 5">
+            </div>
+
+            <h2>Requisitos del Sistema (Xbox Series X)</h2>
+            <ul>
+                <li>Almacenamiento requerido: 110 GB</li>
+                <li>Conexión a Internet: Obligatoria para multijugador y actualizaciones</li>
+                <li>Resolución: Compatible con 4K Ultra HD y HDR</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+           <a href="../pages/videoJuegos.html"> <button class="button-back">Volver</button></a>
+           <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+    <script>
+        function addToCart() {
+    // Simulación de añadir al carro
+    const product = {
+        name: "Forza Horizon 5",
+        price: 149900,
+        platform: "Xbox Series X"
+    };
+
+    // Recuperar el carrito del almacenamiento local
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Agregar el producto al carrito
+    cart.push(product);
+
+    // Guardar el carrito actualizado en el almacenamiento local
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Actualizar la vista del carrito
+    updateCart();
+
+    // Confirmación
+    alert(`${product.name} ha sido añadido al carro.`);
+}
+    </script>
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>

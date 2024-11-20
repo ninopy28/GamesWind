@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PULSE 3D</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../accesorios.html">Accesorios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/diadema ps.PNG" class="game-img" alt="PULSE 3D">
+            <h1>PULSE 3D</h1>
+            <p><b>Precio: $499.900</b></p>
+            <p><b>Plataforma: PlayStation 5</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción del PULSE 3D</h2>
+            <p>El PULSE 3D es el auricular oficial de Sony diseñado para la PlayStation 5, ofreciendo una experiencia de sonido envolvente con audio en 3D. Equipado con micrófonos integrados y soporte para sonido surround, el PULSE 3D garantiza que puedas disfrutar de los juegos, música y medios con una calidad sonora inigualable. Su diseño ergonómico y ligero te permitirá jugar por horas sin incomodidad, mientras que sus controles de audio intuitivos te ofrecen la posibilidad de ajustar la experiencia auditiva en cualquier momento.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Sonido 3D para una experiencia de inmersión total en los juegos.</li>
+                <li>Micrófonos duales con cancelación de ruido para una comunicación clara.</li>
+                <li>Controles de audio ajustables para un fácil control de volumen y silencio.</li>
+                <li>Diseño ergonómico y ligero para comodidad durante largas sesiones de juego.</li>
+                <li>Compatibilidad con PlayStation 5 y PC.</li>
+                <li>Conexión inalámbrica para mayor libertad de movimiento.</li>
+            </ul>
+
+            <h2>Imágenes del PULSE 3D</h2>
+            <div class="game-gallery">
+                <img src="../img/games/pulse1.png" alt="Imagen 1 del PULSE 3D">
+                <img src="../img/games/pulse2.png" alt="Imagen 2 del PULSE 3D">
+                <img src="../img/games/pulse3.png" alt="Imagen 3 del PULSE 3D">
+            </div>
+
+            <h2>Especificaciones del PULSE 3D</h2>
+            <ul>
+                <li>Conectividad: Inalámbrica (con receptor USB para PlayStation 5)</li>
+                <li>Micrófonos: Dual con cancelación de ruido</li>
+                <li>Frecuencia: 20Hz – 20kHz</li>
+                <li>Respuesta de sonido: Sonido 3D y surround</li>
+                <li>Compatibilidad: PlayStation 5, PC, dispositivos móviles</li>
+                <li>Batería: Autonomía de hasta 12 horas por carga</li>
+                <li>Peso: 295 gramos</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+            <a href="../pages/accesorios.html"> <button class="button-back">Volver</button></a>
+            <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+    <script>
+        function addToCart() {
+            // Simulación de añadir al carro
+            const product = {
+                name: "PULSE 3D",
+                price: 499900,
+                platform: "PlayStation 5"
+            };
+
+            // Recuperar el carrito del almacenamiento local
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Agregar el producto al carrito
+            cart.push(product);
+
+            // Guardar el carrito actualizado en el almacenamiento local
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Actualizar la vista del carrito
+            updateCart();
+
+            // Confirmación
+            alert(`${product.name} ha sido añadido al carro.`);
+        }
+    </script>
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>

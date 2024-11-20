@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xbox One Over-Ear Headset</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../accesorios.html">Accesorios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/Over.PNG" class="game-img" alt="Xbox One Over-Ear Headset">
+            <h1>OVER EAR</h1>
+            <p><b>Precio: $299.900</b></p>
+            <p><b>Plataforma: Xbox One y PC</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción:</h2>
+            <p>El Xbox One Over-Ear Headset es un auricular diseñado para ofrecer un sonido envolvente y comunicación clara en tus juegos. Con almohadillas de copa completa para un ajuste cómodo durante largas sesiones de juego, este headset es ideal para disfrutar de audio de alta calidad y para mantener conversaciones sin interferencias. Su micrófono flexible y su conexión fácil con Xbox One y PC lo convierten en un accesorio esencial para los gamers que buscan una experiencia de audio profesional.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Sonido estéreo de alta calidad para una experiencia inmersiva.</li>
+                <li>Almohadillas de copa completa para un ajuste cómodo y aislamiento de ruido.</li>
+                <li>Micrófono flexible para comunicación clara.</li>
+                <li>Conexión de 3,5 mm, compatible con Xbox One y PC.</li>
+                <li>Control de volumen y micrófono en línea para fácil ajuste.</li>
+                <li>Diseño ligero y cómodo, ideal para largas sesiones de juego.</li>
+            </ul>
+
+            <h2>Imágenes del OVER EAR</h2>
+            <div class="game-gallery">
+                <img src="../img/games/over1.PNG" alt="Imagen 1 del Xbox One Over-Ear Headset">
+                <img src="../img/games/over2.PNG" alt="Imagen 2 del Xbox One Over-Ear Headset">
+                <img src="../img/games/over3.PNG" alt="Imagen 3 del Xbox One Over-Ear Headset">
+            </div>
+
+            <h2>Especificaciones del OVER EAR</h2>
+            <ul>
+                <li>Conexión: 3,5 mm (consolas Xbox One y PC)</li>
+                <li>Tipo de auricular: Over-ear</li>
+                <li>Micrófono: Flexible y ajustable</li>
+                <li>Control de volumen y micrófono integrado</li>
+                <li>Almohadillas: Suaves y acolchonadas para mayor comodidad</li>
+                <li>Longitud del cable: 1,2 m</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+            <a href="../pages/accesorios.html"> <button class="button-back">Volver</button></a>
+            <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+    <script>
+        function addToCart() {
+            // Simulación de añadir al carro
+            const product = {
+                name: "OVER EAR",
+                price: 299900,
+                platform: "Xbox One, PC"
+            };
+
+            // Recuperar el carrito del almacenamiento local
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Agregar el producto al carrito
+            cart.push(product);
+
+            // Guardar el carrito actualizado en el almacenamiento local
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Actualizar la vista del carrito
+            updateCart();
+
+            // Confirmación
+            alert(`${product.name} ha sido añadido al carro.`);
+        }
+    </script>
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>

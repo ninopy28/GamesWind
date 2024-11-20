@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayStation VR</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../accesorios.html">Accesorios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/VR.PNG" class="game-img" alt="PlayStation VR">
+            <h1>PlayStation VR</h1>
+            <p><b>Precio: $2.600.000</b></p>
+            <p><b>Plataforma: PlayStation 4 / PlayStation 5</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción del PlayStation VR</h2>
+            <p>El PlayStation VR es un sistema de realidad virtual diseñado para ofrecer una experiencia de juego completamente inmersiva en las consolas PlayStation 4 y PlayStation 5. Con una pantalla OLED de alta resolución y seguimiento de movimiento en 360 grados, podrás sentirte dentro del juego, interactuar con el entorno y disfrutar de gráficos y sonido de calidad. Perfecto para los jugadores que buscan una experiencia de juego avanzada y única.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Pantalla OLED con resolución de 1920 x 1080 píxeles (960 x 1080 por ojo).</li>
+                <li>Seguimiento de movimiento en 360 grados para una experiencia inmersiva.</li>
+                <li>Campo de visión de 100 grados para mayor realismo.</li>
+                <li>Compatibilidad con más de 500 juegos de realidad virtual y acceso a títulos exclusivos de PSVR.</li>
+                <li>Audífonos integrados con sonido 3D para una experiencia auditiva envolvente.</li>
+                <li>Conexión fácil con las consolas PlayStation 4 y PlayStation 5.</li>
+            </ul>
+
+            <h2>Imágenes del PlayStation VR</h2>
+            <div class="game-gallery">
+                <img src="../img/games/vr1.png" alt="Imagen 1 del PlayStation VR">
+                <img src="../img/games/vr2.png" alt="Imagen 2 del PlayStation VR">
+                <img src="../img/games/vr3.png" alt="Imagen 3 del PlayStation VR">
+            </div>
+
+            <h2>Especificaciones del PlayStation VR</h2>
+            <ul>
+                <li>Pantalla: OLED de 5.7 pulgadas</li>
+                <li>Resolución: 1920 x 1080 píxeles (960 x 1080 por ojo)</li>
+                <li>Frecuencia de actualización: 90Hz y 120Hz</li>
+                <li>Campo de visión: 100 grados</li>
+                <li>Conexión: A través de cable a PlayStation 4 o PlayStation 5</li>
+                <li>Audífonos: Integrados con sonido 3D</li>
+                <li>Peso: 610 gramos</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+            <a href="../pages/accesorios.html"> <button class="button-back">Volver</button></a>
+            <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+    <script>
+        function addToCart() {
+            // Simulación de añadir al carro
+            const product = {
+                name: "PlayStation VR",
+                price: 2600000,
+                platform: "PlayStation 4 / PlayStation 5"
+            };
+
+            // Recuperar el carrito del almacenamiento local
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Agregar el producto al carrito
+            cart.push(product);
+
+            // Guardar el carrito actualizado en el almacenamiento local
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Actualizar la vista del carrito
+            updateCart();
+
+            // Confirmación
+            alert(`${product.name} ha sido añadido al carro.`);
+        }
+    </script>
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>
