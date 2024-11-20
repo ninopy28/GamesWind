@@ -15,14 +15,22 @@ document.getElementById('threejs-container').appendChild(renderer.domElement); /
 // Creación control del objeto 
 const controls = new OrbitControls(camera, renderer.domElement);
 
-// Luz ambiente 
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // Color blanco y 50% de intensidad
+// Luz ambiental para iluminación general
+const ambientLight = new THREE.AmbientLight(0xffffff, 1.5); 
 scene.add(ambientLight);
 
-// Luz direccional
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5); // Luz blanca intensa
-directionalLight.position.set(5, 10, 7.5); // Posicionamos la luz
+// Luz direccional para sombras y detalles
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1.8);
+directionalLight.position.set(5, 10, 7.5);
+directionalLight.castShadow = true; // Habilita las sombras
 scene.add(directionalLight);
+
+// Luz puntual para detalles adicionales
+const pointLight = new THREE.PointLight(0xffffff, 0.6);
+pointLight.position.set(2, 5, 2);
+scene.add(pointLight);
+
+
 
 let model;
 // Carga de objeto 3D

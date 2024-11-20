@@ -13,19 +13,22 @@ const camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.inner
 // Crear un renderizador
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(800, 600);
-document.getElementById('threejs-container').appendChild(renderer.domElement); // Agregar al contenedor
+document.getElementById('threejs-container').appendChild(renderer.domElement); 
 
 // Creación control del objeto 
 const controls = new OrbitControls(camera, renderer.domElement);
 
 // Luz ambiente 
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // Color blanco y 50% de intensidad
+const ambientLight = new THREE.AmbientLight(0xffffff, 2.8); 
 scene.add(ambientLight);
 
+
 // Luz direccional
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5); // Luz blanca intensa
-directionalLight.position.set(5, 10, 7.5); // Posicionamos la luz
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1.8); // Luz blanca intensa
+directionalLight.position.set(10, 15, 10); 
 scene.add(directionalLight);
+
+
 
 let model;
 // Carga de objeto 3D
@@ -34,7 +37,7 @@ loader.load('../renders/Xbox.glb', function (gltf) {
     model = gltf.scene;
 
     // Ajustar la escala
-    model.scale.set(18, 18, 18); // Escala a la mitad
+    model.scale.set(25, 25, 25); // Escala a la mitad
 
     // Ajustar rotación
     model.rotation.x = Math.PI;
