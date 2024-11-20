@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DualSense Wireless Controller</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../accesorios.html">Accesorios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/Control Ps.PNG" class="game-img" alt="DualSense Wireless Controller">
+            <h1>DualSense</h1>
+            <p><b>Precio: $319.900</b></p>
+            <p><b>Plataforma: PlayStation 5</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción del DualSense:</h2>
+            <p>El DualSense de PlayStation 5 es la evolución de la icónica joypad de Sony, ofreciendo nuevas funcionalidades para una experiencia de juego más inmersiva. Con retroalimentación háptica avanzada y gatillos adaptativos, este control te permitirá sentir cada acción del juego, desde el impacto de un disparo hasta el efecto de la lluvia sobre tu personaje. Su diseño ergonómico y cómodo garantiza largas sesiones de juego sin molestias. Además, su integración con la consola PS5 te asegura una conexión rápida y estable.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Retroalimentación háptica avanzada para una experiencia inmersiva.</li>
+                <li>Gatillos adaptativos con resistencia variable según la acción.</li>
+                <li>Diseño ergonómico para mayor comodidad durante largas sesiones de juego.</li>
+                <li>Micrófono incorporado y botón de mutear para comunicación directa.</li>
+                <li>Conexión inalámbrica y por cable con la consola PlayStation 5.</li>
+                <li>Batería recargable con duración extendida.</li>
+            </ul>
+
+            <h2>Imágenes del DualSense</h2>
+            <div class="game-gallery">
+                <img src="../img/games/dual1.png" alt="Imagen 1 del DualSense Wireless Controller">
+                <img src="../img/games/dual2.png" alt="Imagen 2 del DualSense Wireless Controller">
+                <img src="../img/games/dual3.png" alt="Imagen 3 del DualSense Wireless Controller">
+            </div>
+
+            <h2>Especificaciones del DualSense</h2>
+            <ul>
+                <li>Conexión: Inalámbrica y por cable USB-C (consola PlayStation 5)</li>
+                <li>Retroalimentación: Hábil y adaptativa con sensaciones de presión y vibración realistas.</li>
+                <li>Micrófono: Integrado y botón para mutear.</li>
+                <li>Batería: Recargable con duración extendida.</li>
+                <li>Colores: Blanco y negro, con detalles en azul</li>
+                <li>Dimensiones: 160 x 66 x 106 mm</li>
+                <li>Peso: 280 gramos</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+            <a href="../pages/accesorios.html"> <button class="button-back">Volver</button></a>
+            <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+    <script>
+        function addToCart() {
+            // Simulación de añadir al carro
+            const product = {
+                name: "DualSense",
+                price: 319900,
+                platform: "PlayStation 5"
+            };
+
+            // Recuperar el carrito del almacenamiento local
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Agregar el producto al carrito
+            cart.push(product);
+
+            // Guardar el carrito actualizado en el almacenamiento local
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Actualizar la vista del carrito
+            updateCart();
+
+            // Confirmación
+            alert(`${product.name} ha sido añadido al carro.`);
+        }
+    </script>
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>

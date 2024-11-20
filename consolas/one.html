@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xbox One</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../consolas.html">Consolas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/one.PNG" class="game-img" alt="Xbox One">
+            <h1>Xbox One</h1>
+            <p><b>Precio: $1.000.000</b></p>
+            <p><b>Plataforma: Xbox</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción de la Consola</h2>
+            <p>La Xbox One es una consola de videojuegos de última generación lanzada por Microsoft. Con un rendimiento gráfico sólido y una excelente compatibilidad con una amplia variedad de títulos, la Xbox One ofrece una experiencia de juego muy accesible. Su tecnología de resolución de hasta 1080p a 60 FPS y una excelente biblioteca de juegos, incluyendo títulos exclusivos, hacen de la Xbox One una opción confiable para los jugadores. Además, su integración con Xbox Live y Xbox Game Pass proporciona acceso a una extensa variedad de juegos y contenido adicional.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Rendimiento optimizado con soporte para 1080p a 60 FPS.</li>
+                <li>Almacenamiento de 500 GB o 1 TB, dependiendo del modelo.</li>
+                <li>Compatibilidad con una amplia gama de juegos de Xbox 360 y Xbox One.</li>
+                <li>Soporte para Xbox Game Pass, con acceso a cientos de juegos.</li>
+                <li>Conexión a Xbox Live para juegos en línea y descargas de contenido.</li>
+                <li>Diseño elegante y funcional para todo tipo de espacio.</li>
+            </ul>
+
+            <h2>Imágenes de la Consola</h2>
+            <div class="game-gallery">
+                <img src="../img/games/one1.png" alt="Imagen 1 de Xbox One">
+                <img src="../img/games/one2.png" alt="Imagen 2 de Xbox One">
+                <img src="../img/games/one3.png" alt="Imagen 3 de Xbox One">
+            </div>
+
+            <h2>Especificaciones del Sistema</h2>
+            <ul>
+                <li>Almacenamiento: 500 GB o 1 TB HDD</li>
+                <li>Conexión a Internet: Necesaria para actualizaciones y acceso a Xbox Live</li>
+                <li>Resolución: Compatible con 1080p a 60 FPS</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+            <a href="../pages/consolas.html"> <button class="button-back">Volver</button></a>
+            <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+    <script>
+        function addToCart() {
+            // Simulación de añadir al carro
+            const product = {
+                name: "Xbox One",
+                price: 1000000,
+                platform: "Xbox"
+            };
+
+            // Recuperar el carrito del almacenamiento local
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Agregar el producto al carrito
+            cart.push(product);
+
+            // Guardar el carrito actualizado en el almacenamiento local
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Actualizar la vista del carrito
+            updateCart();
+
+            // Confirmación
+            alert(`${product.name} ha sido añadido al carro.`);
+        }
+    </script>
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>

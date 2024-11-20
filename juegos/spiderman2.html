@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider-Man 2 PS5</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../videojuegos.html">Videojuegos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/Marvel spiderman 2.PNG" class="game-img" alt="Spider-Man 2 PS5">
+            <h1>Spider-Man 2</h1>
+            <p><b>Precio: $319.000</b></p>
+            <p><b>Plataforma: PlayStation 5</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción del Juego</h2>
+            <p>Spider-Man 2 para PS5 continúa la historia de Miles Morales y Peter Parker mientras enfrentan nuevas amenazas en Nueva York. Este juego de acción y aventura sigue a los dos héroes luchando contra el villano Venom y otros enemigos poderosos, todo mientras exploran una ciudad más expansiva y dinámica. La jugabilidad introduce nuevas mecánicas, como el uso combinado de ambos Spider-Men, y mejoras en los movimientos y la narrativa, ofreciendo una experiencia más inmersiva. Con gráficos mejorados y rendimiento optimizado para PS5, el juego se presenta como una de las mejores experiencias en la nueva generación.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Juego de acción y aventura con Peter Parker y Miles Morales como protagonistas.</li>
+                <li>Gráficos impresionantes con soporte para 4K y HDR, optimizados para PS5.</li>
+                <li>Exploración y combate mejorados en una ciudad de Nueva York más grande y detallada.</li>
+                <li>Nuevo sistema de habilidades y ataques combinados entre los dos Spider-Men.</li>
+                <li>Historia profunda con enemigos icónicos, como Venom, y momentos llenos de emoción.</li>
+            </ul>
+
+            <h2>Imágenes del Juego</h2>
+            <div class="game-gallery">
+                <img src="../img/games/spider1.PNG" alt="Imagen 1 de Spider-Man 2 PS5">
+                <img src="../img/games/spider2.PNG" alt="Imagen 2 de Spider-Man 2 PS5">
+                <img src="../img/games/spider3.PNG" alt="Imagen 3 de Spider-Man 2 PS5">
+            </div>
+
+            <h2>Requisitos del Sistema (PS5)</h2>
+            <ul>
+                <li>Almacenamiento requerido: 100 GB</li>
+                <li>Conexión a Internet: Necesaria para actualizaciones y contenido adicional</li>
+                <li>Resolución: Compatible con 4K y HDR</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+            <a href="../pages/videoJuegos.html"> <button class="button-back">Volver</button></a>
+            <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+    <script>
+        function addToCart() {
+            // Simulación de añadir al carro
+            const product = {
+                name: "Spider-Man 2",
+                price: 319000,
+                platform: "PlayStation 5"
+            };
+
+            // Recuperar el carrito del almacenamiento local
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Agregar el producto al carrito
+            cart.push(product);
+
+            // Guardar el carrito actualizado en el almacenamiento local
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Actualizar la vista del carrito
+            updateCart();
+
+            // Confirmación
+            alert(`${product.name} ha sido añadido al carro.`);
+        }
+    </script>
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>

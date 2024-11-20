@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA V</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../videojuegos.html">Videojuegos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/Gta5.PNG" class="game-img" alt="GTA V">
+            <h1>GTA V</h1>
+            <p><b>Precio: $126.900</b></p>
+            <p><b>Plataforma: Xbox Series X</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción del Juego</h2>
+            <p>Grand Theft Auto V (GTA V) es el último título en la serie de acción y aventura de Rockstar Games. El juego ofrece una experiencia única de mundo abierto, con una narrativa compleja y un modo online expansivo.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Modo historia con tres personajes jugables: Michael, Franklin y Trevor.</li>
+                <li>Gran mundo abierto con diversas actividades y misiones secundarias.</li>
+                <li>Modo online que permite jugar con otros jugadores en un mundo compartido.</li>
+                <li>Gráficos mejorados y una jugabilidad fluida y dinámica.</li>
+            </ul>
+
+            <h2>Imágenes del Juego</h2>
+            <div class="game-gallery">
+                <img src="../img/games/GTA1.PNG" alt="Imagen 1 de GTA V">
+                <img src="../img/games/GTA2.PNG" alt="Imagen 2 de GTA V">
+                <img src="../img/games/GTA3.PNG" alt="Imagen 3 de GTA V">
+            </div>
+
+            <h2>Requisitos del Sistema (Xbox Series X)</h2>
+            <ul>
+                <li>Almacenamiento requerido: 90 GB</li>
+                <li>Conexión a Internet: Obligatoria para multijugador y actualizaciones</li>
+                <li>Resolución: Compatible con 4K Ultra HD y HDR</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+           <a href="../pages/videoJuegos.html"> <button class="button-back">Volver</button></a>
+           <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        function addToCart() {
+    // Simulación de añadir al carro
+    const product = {
+        name: "GTA V",
+        price: 126900,
+        platform: "Xbox Series X"
+    };
+
+    // Recuperar el carrito del almacenamiento local
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Agregar el producto al carrito
+    cart.push(product);
+
+    // Guardar el carrito actualizado en el almacenamiento local
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Actualizar la vista del carrito
+    updateCart();
+
+    // Confirmación
+    alert(`${product.name} ha sido añadido al carro.`);
+}
+
+    </script>
+
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>

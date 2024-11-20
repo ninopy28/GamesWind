@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo de Compra</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+        .cart-details {
+            margin: 20px 0;
+        }
+        .cart-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        .cart-details ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .total {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .thank-you-message {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .button-container {
+            text-align: center;
+        }
+        .button-container a {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .button-container a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Recibo de Compra</h1>
+    </header>
+
+    <div class="container">
+        <div class="thank-you-message">
+            ¡Gracias por su compra! Su pedido ha sido procesado exitosamente.
+        </div>
+
+        <div class="cart-details">
+            <h2>Detalles de la Compra</h2>
+            <ul id="cart-items-list">
+                <!-- Los productos añadidos al carrito se mostrarán aquí -->
+            </ul>
+            <div class="total" id="total-price">
+                <!-- El precio total se mostrará aquí -->
+            </div>
+        </div>
+
+        <div class="button-container">
+            <a href="#" onclick="vaciarCarritoYRedirigir()">Volver al Inicio</a>
+        </div>
+    </div>
+
+    <script>
+        // Función para cargar los productos del carrito
+        function loadCart() {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const cartItemsList = document.getElementById("cart-items-list");
+            const totalPriceElement = document.getElementById("total-price");
+            let total = 0;
+
+            // Limpiar lista de productos antes de agregar nuevos
+            cartItemsList.innerHTML = "";
+
+            if (cart.length === 0) {
+                cartItemsList.innerHTML = "<li>El carrito está vacío.</li>";
+                totalPriceElement.innerHTML = "Total: $0.00";
+            } else {
+                cart.forEach(item => {
+                    cartItemsList.innerHTML += `<li>${item.name} - $${item.price}</li>`;
+                    total += item.price;
+                });
+                totalPriceElement.innerHTML = `Total: $${total.toFixed(2)}`;
+            }
+        }
+
+        // Función para vaciar el carrito
+        function vaciarCarritoYRedirigir() {
+            // Vaciamos el carrito en el localStorage
+            localStorage.removeItem("cart");
+
+            // Redirigir al inicio
+            window.location.href = "../index.html"; // Cambia a la URL del inicio
+        }
+
+        // Cargar los productos al cargar la página
+        document.addEventListener("DOMContentLoaded", loadCart);
+    </script>
+    
+</body>
+</html>

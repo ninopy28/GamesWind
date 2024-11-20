@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xbox Series S</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../consolas.html">Consolas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/series s.PNG" class="game-img" alt="Xbox Series S">
+            <h1>Xbox Series S</h1>
+            <p><b>Precio: $1.400.000</b></p>
+            <p><b>Plataforma: Xbox</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción de la Consola</h2>
+            <p>La Xbox Series S es la consola de nueva generación de Microsoft, diseñada para ofrecer una experiencia de juego de alta calidad a un precio más accesible. Con una potencia gráfica optimizada, tiempos de carga ultrarrápidos y compatibilidad con miles de juegos de Xbox One, Series X, y Game Pass, la Xbox Series S ofrece un rendimiento impresionante a una resolución de hasta 1440p, con soporte para 120 FPS. Además, su diseño compacto y elegante la convierte en una excelente opción para quienes buscan la mejor experiencia de juego sin ocupar mucho espacio.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Rendimiento optimizado con soporte para 1440p a 120 FPS.</li>
+                <li>Almacenamiento SSD de 512 GB para tiempos de carga ultrarrápidos.</li>
+                <li>Compatibilidad con juegos de generaciones anteriores (Xbox One, Xbox 360).</li>
+                <li>Soporte para Xbox Game Pass, con acceso a cientos de juegos.</li>
+                <li>Diseño compacto, ideal para espacios reducidos.</li>
+                <li>Fidelidad gráfica con soporte para ray tracing.</li>
+            </ul>
+
+            <h2>Imágenes de la Consola</h2>
+            <div class="game-gallery">
+                <img src="../img/games/xbox1.png" alt="Imagen 1 de Xbox Series S">
+                <img src="../img/games/xbox2.png" alt="Imagen 2 de Xbox Series S">
+                <img src="../img/games/xbox3.png" alt="Imagen 3 de Xbox Series S">
+            </div>
+
+            <h2>Especificaciones del Sistema</h2>
+            <ul>
+                <li>Almacenamiento: 512 GB SSD</li>
+                <li>Conexión a Internet: Necesaria para actualizaciones y acceso a Xbox Live y Game Pass</li>
+                <li>Resolución: Compatible con 1440p y 120 FPS</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+            <a href="../pages/consolas.html"> <button class="button-back">Volver</button></a>
+            <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+    <script>
+        function addToCart() {
+            // Simulación de añadir al carro
+            const product = {
+                name: "Xbox Series S",
+                price: 1400000,
+                platform: "Xbox"
+            };
+
+            // Recuperar el carrito del almacenamiento local
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Agregar el producto al carrito
+            cart.push(product);
+
+            // Guardar el carrito actualizado en el almacenamiento local
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Actualizar la vista del carrito
+            updateCart();
+
+            // Confirmación
+            alert(`${product.name} ha sido añadido al carro.`);
+        }
+    </script>
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>

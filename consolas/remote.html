@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS5 Remote</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../consolas.html">Consolas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/Ps remote.PNG" class="game-img" alt="PS5 Remote">
+            <h1>PS5 Remote</h1>
+            <p><b>Precio: $1.000.000</b></p>
+            <p><b>Plataforma: PlayStation 5</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción del PS5 Remote</h2>
+            <p>La PS5 Remote es un accesorio exclusivo diseñado para la PlayStation 5, que permite a los usuarios controlar la consola de manera remota, gestionar la reproducción de contenido multimedia y disfrutar de una experiencia más fluida en sus funciones diarias. Este dispositivo de alta gama tiene características avanzadas, incluyendo integración perfecta con los sistemas de entretenimiento de la PS5, ideal para quienes buscan mayor comodidad al controlar su consola desde cualquier lugar.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Control remoto exclusivo para PS5 con funcionalidades avanzadas.</li>
+                <li>Ideal para controlar el acceso a las aplicaciones de streaming, menús, y más.</li>
+                <li>Diseño ergonómico y fácil de usar, optimizado para la PS5.</li>
+                <li>Conexión inalámbrica directa para una experiencia sin interrupciones.</li>
+                <li>Diseñado para garantizar una larga duración y comodidad durante su uso prolongado.</li>
+            </ul>
+
+            <h2>Imágenes del PS5 Remote</h2>
+            <div class="game-gallery">
+                <img src="../img/games/remote1.png" alt="Imagen 1 de PS5 Remote">
+                <img src="../img/games/remote2.png" alt="Imagen 2 de PS5 Remote">
+                <img src="../img/games/remote3.png" alt="Imagen 3 de PS5 Remote">
+            </div>
+
+            <h2>Especificaciones del PS5 Remote</h2>
+            <ul>
+                <li>Conexión: Inalámbrica con PlayStation 5</li>
+                <li>Compatibilidad: Perfecta integración con PS5 y aplicaciones multimedia.</li>
+                <li>Alimentación: Pilas recargables de alta duración (incluidas).</li>
+                <li>Funciones: Control total de aplicaciones, ajuste de volumen, navegación por menús, entre otras.</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+            <a href="../pages/consolas.html"> <button class="button-back">Volver</button></a>
+            <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+    <script>
+        function addToCart() {
+            // Simulación de añadir al carro
+            const product = {
+                name: "PS5 Remote",
+                price: 1000000,
+                platform: "PlayStation 5"
+            };
+
+            // Recuperar el carrito del almacenamiento local
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Agregar el producto al carrito
+            cart.push(product);
+
+            // Guardar el carrito actualizado en el almacenamiento local
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Actualizar la vista del carrito
+            updateCart();
+
+            // Confirmación
+            alert(`${product.name} ha sido añadido al carro.`);
+        }
+    </script>
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last of Us Part II</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../videojuegos.html">Videojuegos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/the last of us.PNG" class="game-img" alt="The Last of Us Part II">
+            <h1>The Last of Us Part II</h1>
+            <p><b>Precio: $264.900</b></p>
+            <p><b>Plataforma: PlayStation 5</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción del Juego</h2>
+            <p>The Last of Us Part II es la secuela del aclamado juego de acción y aventura que sigue las intensas y emocionales travesías de Ellie en un mundo post-apocalíptico. La historia profundiza en el dolor, la venganza y las difíciles decisiones morales que Ellie enfrenta en su misión. El juego combina una narrativa profundamente emotiva con un diseño de juego altamente detallado, donde el combate y la exploración son elementos clave. A lo largo del juego, los jugadores se enfrentan a enemigos humanos y criaturas infectadas mientras exploran entornos hermosos pero desolados.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Historia intensa y emotiva centrada en temas de venganza, redención y sacrificio.</li>
+                <li>Gráficos espectaculares, optimizados para PS5, con soporte para 4K y HDR.</li>
+                <li>Jugabilidad fluida con una mezcla de sigilo y combate intenso.</li>
+                <li>Exploración detallada de un mundo post-apocalíptico y entornos deslumbrantes.</li>
+                <li>Mejoras en la IA de los enemigos y aliados para una experiencia más inmersiva.</li>
+            </ul>
+
+            <h2>Imágenes del Juego</h2>
+            <div class="game-gallery">
+                <img src="../img/games/last1.png" alt="Imagen 1 de The Last of Us Part II">
+                <img src="../img/games/last2.png" alt="Imagen 2 de The Last of Us Part II">
+                <img src="../img/games/last3.png" alt="Imagen 3 de The Last of Us Part II">
+            </div>
+
+            <h2>Requisitos del Sistema (PS5)</h2>
+            <ul>
+                <li>Almacenamiento requerido: 100 GB</li>
+                <li>Conexión a Internet: Necesaria para actualizaciones y contenido adicional</li>
+                <li>Resolución: Compatible con 4K y HDR</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+            <a href="../pages/videoJuegos.html"> <button class="button-back">Volver</button></a>
+            <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+    <script>
+        function addToCart() {
+            // Simulación de añadir al carro
+            const product = {
+                name: "The Last of Us Part II",
+                price: 264900,
+                platform: "PlayStation 5"
+            };
+
+            // Recuperar el carrito del almacenamiento local
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Agregar el producto al carrito
+            cart.push(product);
+
+            // Guardar el carrito actualizado en el almacenamiento local
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Actualizar la vista del carrito
+            updateCart();
+
+            // Confirmación
+            alert(`${product.name} ha sido añadido al carro.`);
+        }
+    </script>
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xbox Series X</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../consolas.html">Consolas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/series x.PNG" class="game-img" alt="Xbox Series X">
+            <h1>Xbox Series X</h1>
+            <p><b>Precio: $2.240.000</b></p>
+            <p><b>Plataforma: Xbox</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción de la Consola</h2>
+            <p>La Xbox Series X es la consola de nueva generación de Microsoft, diseñada para ofrecer un rendimiento gráfico superior, tiempos de carga ultrarrápidos y una experiencia de juego fluida. Con su potencia gráfica y un rendimiento de hasta 4K a 120 FPS, la Series X es ideal para quienes buscan lo mejor en rendimiento y fidelidad visual. Además, cuenta con soporte para ray tracing y una amplia biblioteca de juegos, haciendo de esta consola una de las más potentes del mercado.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Rendimiento optimizado con soporte para 4K a 120 FPS.</li>
+                <li>Almacenamiento SSD de 1 TB para tiempos de carga ultrarrápidos.</li>
+                <li>Compatibilidad con juegos de generaciones anteriores (Xbox One, Xbox 360).</li>
+                <li>Soporte para Xbox Game Pass, con acceso a cientos de juegos.</li>
+                <li>Diseño con refrigeración avanzada para un rendimiento óptimo.</li>
+                <li>Fidelidad gráfica con soporte para ray tracing.</li>
+            </ul>
+
+            <h2>Imágenes de la Consola</h2>
+            <div class="game-gallery">
+                <img src="../img/games/xboxX1.png" alt="Imagen 1 de Xbox Series X">
+                <img src="../img/games/xboxX2.png" alt="Imagen 2 de Xbox Series X">
+                <img src="../img/games/xboxX3.png" alt="Imagen 3 de Xbox Series X">
+            </div>
+
+            <h2>Especificaciones del Sistema</h2>
+            <ul>
+                <li>Almacenamiento: 1 TB SSD</li>
+                <li>Conexión a Internet: Necesaria para actualizaciones y acceso a Xbox Live y Game Pass</li>
+                <li>Resolución: Compatible con 4K y 120 FPS</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+            <a href="../pages/consolas.html"> <button class="button-back">Volver</button></a>
+            <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+    <script>
+        function addToCart() {
+            // Simulación de añadir al carro
+            const product = {
+                name: "Xbox Series X",
+                price: 2240000,
+                platform: "Xbox"
+            };
+
+            // Recuperar el carrito del almacenamiento local
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Agregar el producto al carrito
+            cart.push(product);
+
+            // Guardar el carrito actualizado en el almacenamiento local
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Actualizar la vista del carrito
+            updateCart();
+
+            // Confirmación
+            alert(`${product.name} ha sido añadido al carro.`);
+        }
+    </script>
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>

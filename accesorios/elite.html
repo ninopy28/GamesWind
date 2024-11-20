@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xbox Elite Series 2 Controller</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../accesorios.html">Accesorios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/Elite2.PNG" class="game-img" alt="Xbox Elite Series 2 Controller">
+            <h1>Xbox Elite 2</h1>
+            <p><b>Precio: $849.990</b></p>
+            <p><b>Plataforma: Xbox y PC</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción del Xbox Elite 2</h2>
+            <p>El Xbox Elite 2 es el mando premium diseñado para jugadores que buscan un control total y una experiencia personalizada. Con opciones de ajuste de tensión en los joysticks, empuñaduras de goma texturizada, y múltiples botones de perfil intercambiables, el Elite Series 2 ofrece la mayor flexibilidad y rendimiento en el juego. Además, su batería recargable de larga duración y la conectividad tanto con Xbox como con PC hacen de este mando una excelente opción para gamers exigentes.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Joysticks ajustables con tensiones personalizables.</li>
+                <li>Empuñaduras de goma texturizada para mayor comodidad.</li>
+                <li>Batería recargable de larga duración (hasta 40 horas de juego).</li>
+                <li>Botones y palancas intercambiables para adaptarse a diferentes estilos de juego.</li>
+                <li>Conexión inalámbrica o por cable con Xbox y PC.</li>
+                <li>Diseño ergonómico y duradero.</li>
+            </ul>
+
+            <h2>Imágenes del Xbox Elite 2 </h2>
+            <div class="game-gallery">
+                <img src="../img/games/elite1.png" alt="Imagen 1 de Xbox Elite Series 2 Controller">
+                <img src="../img/games/elite2.png" alt="Imagen 2 de Xbox Elite Series 2 Controller">
+                <img src="../img/games/elite3.png" alt="Imagen 3 de Xbox Elite Series 2 Controller">
+            </div>
+
+            <h2>Especificaciones del Xbox Elite 2 </h2>
+            <ul>
+                <li>Conexión: Inalámbrica y por cable (USB-C)</li>
+                <li>Compatibilidad: Xbox One, Xbox Series X|S, PC</li>
+                <li>Batería: Recargable (hasta 40 horas de duración)</li>
+                <li>Joysticks: Ajustables con tensiones personalizables</li>
+                <li>Botones: Intercambiables para personalizar la experiencia</li>
+                <li>Dimensiones: 10.4 x 10.6 x 6.7 cm</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+            <a href="../pages/accesorios.html"> <button class="button-back">Volver</button></a>
+            <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+    <script>
+        function addToCart() {
+            // Simulación de añadir al carro
+            const product = {
+                name: "Xbox Elite 2",
+                price: 849990,
+                platform: "Xbox, PC"
+            };
+
+            // Recuperar el carrito del almacenamiento local
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Agregar el producto al carrito
+            cart.push(product);
+
+            // Guardar el carrito actualizado en el almacenamiento local
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Actualizar la vista del carrito
+            updateCart();
+
+            // Confirmación
+            alert(`${product.name} ha sido añadido al carro.`);
+        }
+    </script>
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>

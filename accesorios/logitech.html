@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logitech G923</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../accesorios.html">Accesorios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/G923.PNG" class="game-img" alt="Logitech G923">
+            <h1>Logitech G923</h1>
+            <p><b>Precio: $1.739.000</b></p>
+            <p><b>Plataforma: Compatible con Xbox y PC</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción del Logitech G923</h2>
+            <p>El Logitech G923 es un volante de carreras diseñado para ofrecer una experiencia de simulación de conducción realista. Con la tecnología TrueForce, este volante cuenta con retroalimentación de fuerza avanzada para un control preciso y natural. Compatible con Xbox y PC, el G923 ofrece una sensación de conducción auténtica con una construcción robusta y una respuesta en tiempo real. Ideal para los entusiastas de las carreras y los simuladores, este volante lleva tu experiencia de juego a otro nivel.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Tecnología TrueForce para una retroalimentación de fuerza avanzada.</li>
+                <li>Fuerza de retroalimentación precisa y realista con motores duales.</li>
+                <li>Volante de 900 grados de giro para mayor control.</li>
+                <li>Pedales ajustables para mayor comodidad.</li>
+                <li>Diseño premium y construcción robusta para máxima durabilidad.</li>
+                <li>Compatibilidad con Xbox y PC.</li>
+            </ul>
+
+            <h2>Imágenes del Logitech G923</h2>
+            <div class="game-gallery">
+                <img src="../img/games/g1.png" alt="Imagen 1 de Logitech G923">
+                <img src="../img/games/g2.png" alt="Imagen 2 de Logitech G923">
+                <img src="../img/games/g3.png" alt="Imagen 3 de Logitech G923">
+            </div>
+
+            <h2>Especificaciones del Logitech G923</h2>
+            <ul>
+                <li>Conexión: por cable</li>
+                <li>Giro: 900 grados</li>
+                <li>Compatibilidad: Xbox One, Xbox Series X|S y PC</li>
+                <li>Retroalimentación: TrueForce (con motor dual)</li>
+                <li>Pedales: Ajustables (acelerador, freno y embrague)</li>
+                <li>Dimensiones: 29.4 x 27.4 x 30.9 cm</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+            <a href="../pages/accesorios.html"> <button class="button-back">Volver</button></a>
+            <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+    <script>
+        function addToCart() {
+            // Simulación de añadir al carro
+            const product = {
+                name: "Logitech G923",
+                price: 1739000,
+                platform: "Xbox, PC"
+            };
+
+            // Recuperar el carrito del almacenamiento local
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Agregar el producto al carrito
+            cart.push(product);
+
+            // Guardar el carrito actualizado en el almacenamiento local
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Actualizar la vista del carrito
+            updateCart();
+
+            // Confirmación
+            alert(`${product.name} ha sido añadido al carro.`);
+        }
+    </script>
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>

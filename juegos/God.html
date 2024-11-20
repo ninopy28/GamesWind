@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God of War 2018</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../videojuegos.html">Videojuegos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game-detail">
+        <div class="game-header">
+            <img src="../img/God of war.PNG" class="game-img" alt="God of War 2018">
+            <h1>God of War</h1>
+            <p><b>Precio: $439.000</b></p>
+            <p><b>Plataforma: PlayStation 5</b></p>
+        </div>
+
+        <div class="game-info">
+            <h2>Descripción del Juego</h2>
+            <p>God of War Ragnarök es la secuela de God of War (2018) y la última entrega de la saga que sigue las aventuras de Kratos y su hijo Atreus. Ambientado en la mitología nórdica, el juego profundiza en el fin del mundo, conocido como Ragnarök, y enfrenta a Kratos contra los dioses y criaturas más poderosas de la región. El juego combina una narrativa emotiva con un combate mejorado y dinámico, además de una exploración más amplia del mundo nórdico. Los jugadores deben tomar decisiones que impactan el destino de los personajes y las relaciones familiares en un mundo en ruinas.</p>
+
+            <h2>Características:</h2>
+            <ul>
+                <li>Historia profunda que continúa la travesía de Kratos y Atreus en el fin del mundo.</li>
+                <li>Mejoras en el combate con nuevas habilidades, armas y una jugabilidad más fluida.</li>
+                <li>Exploración de vastos reinos nórdicos, con nuevas regiones y enemigos legendarios.</li>
+                <li>Gráficos impresionantes, especialmente en la PS5, con soporte para 4K y HDR.</li>
+            </ul>
+
+            <h2>Imágenes del Juego</h2>
+            <div class="game-gallery">
+                <img src="../img/games/god1.PNG" alt="Imagen 1 de God of War 2018">
+                <img src="../img/games/god2.PNG" alt="Imagen 2 de God of War 2018">
+                <img src="../img/games/god3.PNG" alt="Imagen 3 de God of War 2018">
+            </div>
+
+            <h2>Requisitos del Sistema (PS5)</h2>
+            <ul>
+                <li>Almacenamiento requerido: 90 GB</li>
+                <li>Conexión a Internet: Necesaria para actualizaciones y contenido adicional</li>
+                <li>Resolución: Compatible con 4K y HDR</li>
+            </ul>
+        </div>
+
+        <div class="game-actions">
+            <a href="../pages/videoJuegos.html"> <button class="button-back">Volver</button></a>
+            <button class="button-back" onclick="addToCart()">Añadir al carro</button>
+        </div>
+    </section>
+
+    <script>
+        function addToCart() {
+            // Simulación de añadir al carro
+            const product = {
+                name: "God of War",
+                price: 439000,
+                platform: "PlayStation 5"
+            };
+
+            // Recuperar el carrito del almacenamiento local
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Agregar el producto al carrito
+            cart.push(product);
+
+            // Guardar el carrito actualizado en el almacenamiento local
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Actualizar la vista del carrito
+            updateCart();
+
+            // Confirmación
+            alert(`${product.name} ha sido añadido al carro.`);
+        }
+    </script>
+
+    <footer></footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>
