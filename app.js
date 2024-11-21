@@ -26,7 +26,7 @@ header.innerHTML = `
     </div>
 </div>
 
-<button id="miBoton" class="button-login">Login</button>
+<button id="miBoton"></button>
 
 `; // Reemplazamos el valor del header
 
