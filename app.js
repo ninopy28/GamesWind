@@ -10,8 +10,6 @@ header.innerHTML = `
     <a href="../pages/accesorios.html">ACCESORIOS</a>
 </nav>
 
-
-
 <div class="cart-dropdown">
     <a href="#" class="cart-link">
         <img src="../img/carrito.png" alt="Carrito de compras" class="cart-icon" width="40">
@@ -113,7 +111,7 @@ style.textContent = `
     .cart-dropdown {
         position: relative;
         display: inline-block;
-        margin-left: 650px; /* Reducido para acercar más el carrito al botón */
+        margin-left: 400px; /* Reducido para acercar más el carrito al botón */
         vertical-align: middle; /* Asegura que el carrito esté alineado verticalmente con el botón */
     }
 

@@ -39,7 +39,7 @@ loader.load('../renders/Control.glb', function (gltf) {
     model = gltf.scene;
 
     // Ajustar la escala
-    model.scale.set(0.5, 0.5, 0.5); // Escala a la mitad
+    model.scale.set(0.6, 0.6, 0.6); // Escala a la mitad
 
 
     // Ajustar rotación
